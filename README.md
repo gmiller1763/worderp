@@ -1,3 +1,5 @@
+# Worderp
+
 The web should be a fun and friendly place. Our goal is to make a simple, elegant app that allows people to interact with one another in a unique way. Worderp is that app.
 
 # Community Story-Building
