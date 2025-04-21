@@ -1,10 +1,13 @@
 // connection:
 var ipaddress = process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
 var port      = process.env.OPENSHIFT_NODEJS_PORT || 3000;
-var http      = require('http');
-var app       = require('./app');
-var server    = http.createServer(app);
-var io        = require('socket.io').listen(server);
+const http = require('http');
+const app = require('./app');
+const server = http.createServer(app);
+
+const { Server } = require('socket.io');
+const io = new Server(server);
+
 
 // mongolab database:
 var mongoose = require('mongoose');
